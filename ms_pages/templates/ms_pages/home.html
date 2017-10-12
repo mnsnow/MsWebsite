@@ -1,5 +1,18 @@
 {% extends "ms_pages/base.html" %}
 
+{% block header %}
+  <div class='jumbotron'>
+    <h1>This is a Maplestory Fansite</h1>
+  </div>
+{% endblock header %}
+
 {% block content %}
- <p>Ms-snow is a Maplestory fansite where you can find and share useful informations related to Maplestory!</p>
+
+  <h2>
+    <a href="{% url 'users:register' %}">Register an account</a> to make your own contribution to this site. 
+  </h2>
+  <h2>
+    Whenever you want to add something to one of the maplestory related topic, make an new entry for that topic.
+  </h2> 
+
 {% endblock content %}
