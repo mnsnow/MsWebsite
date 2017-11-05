@@ -1,0 +1,38 @@
+{% extends 'ms_pages/base.html' %}
+
+{% block header %}
+  <div class='container'>
+    <h1>Forum</h1>
+  </div>
+{% endblock header %}
+
+
+{% block breadcrumb %}
+  <section id='breadcrumb'>
+    <div class="container">
+      <ol class='breadcrumb'>
+        <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+        <li class='active'><a href="{% url 'ms_pages:forum' %}">Forum</a></li>
+      </ol>
+    </div>
+  </section>
+{% endblock breadcrumb %}
+
+{% block content %}
+
+<div class="row">
+  <p>
+    MapleSnow is a non-commercial website aimed at providing MapleStory players the best possible information.
+  </p>
+  <a href="{% url 'users:register' %}" class = 'btn btn-success' role='button'>Register an account</a> to make
+  your own contribution to this site. Whenever you want to add something to one of the maplestory related topic, make an new entry for that topic.
+  <br>
+  <div class="form-group">
+    <label>Upload file</label>
+    <input type='file'>
+    <p class='help-block'>You can upload png and jpg for image and etc.. for music</p>
+
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,89 @@
+{% extends 'ms_pages/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+<div class="container">
+  <h1>Bowman</h1>
+</div>
+{% endblock header %}
+
+{% block breadcrumb %}
+<section id='breadcrumb'>
+  <div class="container">
+    <ol class='breadcrumb'>
+      <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db_classandjob' %}">Classes and Jobs</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db_classandjob_bowman' %}">Bowman</a></li>
+    </ol>
+  </div>
+</section>
+{% endblock breadcrumb %}
+
+
+{% block  content %}
+<!-- first row -->
+<div class="row">
+  <a href="{% url 'ms_pages:ingame_db_classandjob_bowman_explorer' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Explorer</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/bowman_explorer_001.png' %}" class='img-responsive' alt='bowman_explorer_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_bowman_wildhunter' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Wild Hunter</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/bowman_wildhunter_001.png' %}" class='img-responsive' alt='bowman_wildhunter_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_bowman_windarcher' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Wind Archer</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/bowman_windarcher_001.png' %}" class='img-responsive' alt='bowman_windarcher_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+<!-- second row -->
+<div class="row">
+  <a href="{% url 'ms_pages:ingame_db_classandjob_bowman_mercedes' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Mercedes</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/bowman_mercedes_001.png' %}" class='img-responsive' alt='bowman_mercedes_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+</div>
+
+
+
+
+{% endblock content %}

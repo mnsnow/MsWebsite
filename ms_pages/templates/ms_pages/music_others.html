@@ -1,0 +1,90 @@
+{% extends 'ms_pages/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+
+<div class="container">
+  <h1>Other Music</h1>
+</div>
+
+{% endblock header %}
+
+
+
+{% block breadcrumb %}
+
+<section id='breadcrumb'>
+  <div class="container">
+    <ol class='breadcrumb'>
+      <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:music' %}">Music</a></li>
+      <li class='active'><a href="{% url 'ms_pages:music_others' %}">Other Music</a></li>
+    </ol>
+  </div>
+</section>
+
+{% endblock breadcrumb %}
+
+
+
+{% block content %}
+
+<div class="row">
+  <a href="{% url 'ms_pages:music_others_budapestsymphony' %}">
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading color-bg-2">
+          <h3 class='panel-title'>
+            <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+            Budapest Symphony
+          </h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/budapestsymphony_001.jpg' %}" class='img-responsive'  alt='bedapest_001' style='height:300px; width:350px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:music_others_itcg' %}">
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading color-bg-2">
+          <h3 class='panel-title'>
+            <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+            ITCG
+          </h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/music_itcg_001.jpg' %}" class='img-responsive' alt='itcg_001' style='height:300px '>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<div class="row">
+  <a href="{% url 'ms_pages:music_others_fanmade' %}">
+    <div class="col-md-6">
+      <div class="panel">
+        <div class="panel-heading color-bg-2">
+          <h3 class='panel-title'>
+            <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
+            Fan Made
+          </h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/music_others_fanmade_001.png' %}" class='img-responsive'  alt='fanmade_001' style='height:300px; width:350px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+
+</div>
+
+
+
+{% endblock content %}

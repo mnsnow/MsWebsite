@@ -4,6 +4,23 @@
   <h2>{{ topic }}</h2>
 {% endblock header %}
 
+
+{% block breadcrumb %}
+  <section id='breadcrumb'>
+    <div class="container">
+      <ol class='breadcrumb'>
+        <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+        <li class='active'><a href="{% url 'ms_pages:topics' %}">Topics</a></li>
+        <li class='active'><a href="{% url 'ms_pages:topic' topic.id %}">{{ topic }}</a></li>
+      </ol>
+    </div>
+  </section>
+{% endblock breadcrumb %}
+
+
+
+
+
 {% block content %}
 
   <p>{{ topic }}</p>
@@ -16,7 +33,7 @@
         <div class="panel-heading">
           <h3>
             {{ entry.date_added|date:'M d, Y H:i' }}
-            <small>    
+            <small>
               <a href="{% url 'ms_pages:edit_entry' entry.id %}">edit entry</a>
             </small>
           </h3>

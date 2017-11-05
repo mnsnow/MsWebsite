@@ -1,0 +1,176 @@
+{% extends 'ms_pages/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+<div class="container">
+  <h1>Warrior</h1>
+</div>
+{% endblock header %}
+
+{% block breadcrumb %}
+<section id='breadcrumb'>
+  <div class="container">
+    <ol class='breadcrumb'>
+      <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db_classandjob' %}">Classes and Jobs</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db_classandjob_warrior' %}">Warrior</a></li>
+    </ol>
+  </div>
+</section>
+{% endblock breadcrumb %}
+
+
+{% block  content %}
+<!-- first row -->
+<div class="row">
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_explorer' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Explorer</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_explorer_001.png' %}" class='img-responsive' alt='warrior_explorer_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_aran' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Aran</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_aran_001.png' %}" class='img-responsive' alt='warrior_aran_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_dawnwarrior' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Dawn warrior</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_dawnwarrior_001.png' %}" class='img-responsive' alt='warrior_dawmwarrior_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+<!-- second row -->
+<div class="row">
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_demonavenger' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Demonavenger</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_demonavenger_001.png' %}" class='img-responsive' alt='warrior_demonavenger_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_demonslayer' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Demonslayer</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_demonslayer_001.png' %}" class='img-responsive' class='img-responsive' alt='warrior_demonslayer_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_hayato' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Hayato</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_hayato_001.png' %}" class='img-responsive' alt='warrior_hayato_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+<!-- third row -->
+<div class="row">
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_kaiser' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Kaiser</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_kaiser_001.png' %}" class='img-responsive' alt='warrior_kaiser_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_mihile' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Mihile</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_mihile_001.png' %}" class='img-responsive' alt='warrior_mihile_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_zero' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Zero</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_zero_001.png' %}" class='img-responsive' alt='warrior_zero_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+<!-- fourth row -->
+<div class="row">
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior_blaster' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Blaster</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_blaster_001.png' %}" class='img-responsive' alt='warrior_blaster_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+
+</div>
+
+
+{% endblock content %}

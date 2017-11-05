@@ -7,85 +7,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Ms Snow</title>
-    
+    <title>MapleSnow | under construction</title>
+
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/static_dirs/css/style.css' %}">
 
   </head>
 
   <body>
 
     <!-- Static navbar -->
-    <nav class="navbar navbar=default navbar-static-top">
+    <nav class="navbar navbar-default">
       <div class="container">
 
         <div class="navbar-header">
-          <button type="button" class="nabvar-toggle collapsed"
-            data-toggle="collapse" data-target="#navbar"
-            aria-expanded="false" aria-contro;s="navbar">
-          </button>
-          <a class="navbar-brand" href="{% url 'ms_pages:home' %}">Home</a>
-      
+
+
+
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul id=high1 class="nav navbar-nav">
+            <li><a href="{% url 'ms_pages:home' %}">MapleSnow</a></li>
+            <li><a href="{% url 'ms_pages:home' %}">Home</a></li>
+            <li><a href="{% url 'ms_pages:topics' %}">Topics</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+              <li><a>Hello, {{ user.username }}.</a></li>
+              <li><a href="{% url 'users:logout' %}">log out</a><li>
+            {% else %}
+              <li><a href="{% url 'users:register' %}">register</a></li>
+              <li><a href="{% url 'users:login' %}">log in</a></li>
+            {% endif %}
+          </ul>
+        </div><!--/.nav-collapse -->
+
       </div>
+    </nav>
 
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="{% url 'ms_pages:topics' %}">Topics</a></li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
-          {% if user.is_authenticated %}
-            <li><a>Hello, {{ user.username }}.</a></li>
-            <li><a href="{% url 'users:logout' %}">log out</a><li>
-          {% else %}
-            <li><a href="{% url 'users:register' %}">register</a></li>
-            <li><a href="{% url 'users:login' %}">log in</a></li>
-          {% endif %}
-        </ul>
-      </div><!--/.nav-collapse -->
-
-    </div>
-  </nav>
-
-  <div class="container">
 
     <div class="page-header">
       {% block header %}{% endblock header %}
     </div>
-    <div>
-    {% block content %}{% endblock content %}
+
+    {% block breadcrumb %}{% endblock breadcrumb %}
+
+
+
+    <div class='container'>
+      <div class="row">
+        <!--left_side -->
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="list-group">
+            <a href="{% url 'ms_pages:home'%}" class='list-group-item color-bg-1'>
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+              Home
+            </a>
+            <a href="{% url 'ms_pages:news' %}" class='list-group-item color-bg-2'>News</a>
+            <a href="{% url 'ms_pages:forum' %}" class='list-group-item color-bg-2'>Forum</a>
+            <a href="{% url 'ms_pages:music' %}" class='list-group-item color-bg-1'>
+              <span class="glyphicon glyphicon-music" aria-hidden="true"></span>
+              music
+            </a>
+            <a href="{% url 'ms_pages:music_bgms' %}" class='list-group-item color-bg-2'>Original BGMs</a>
+            <a href="{% url 'ms_pages:music_others' %}" class='list-group-item color-bg-2'>Others</a>
+            <a href="{% url 'ms_pages:ingame_db' %}" class='list-group-item color-bg-1'>
+              <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+              Database
+            </a>
+            <a href="{% url 'ms_pages:ingame_db_classandjob' %}" class='list-group-item color-bg-2'>Classes & Jobs</a>
+            <a href="{% url 'ms_pages:ingame_db_items' %}" class='list-group-item color-bg-2'>Items</a>
+            <a href="{% url 'ms_pages:ingame_db_monster' %}" class='list-group-item color-bg-2'>Monsters</a>
+            <a href="{% url 'ms_pages:itcg' %}" class='list-group-item color-bg-1'>
+              <span class="glyphicon glyphicon-pawn" aria-hidden="true"></span>
+              ITCG
+            </a>
+            <a href="{% url 'ms_pages:itcg_baseset' %}" class='list-group-item color-bg-2'>Set 1: Base Set</a>
+            <a href="{% url 'ms_pages:itcg_omgbosses' %}" class='list-group-item color-bg-2'>Set 2: OMG Bosses!</a>
+            <a href="{% url 'ms_pages:itcg_p3ts' %}" class='list-group-item color-bg-2'>Set 3: P3ts</a>
+            <a href="{% url 'ms_pages:itcg_npcheroes' %}" class='list-group-item color-bg-2'>Set 4: Npc Heroes</a>
+            <a href="{% url 'ms_pages:itcg_beholdzakum' %}" class='list-group-item color-bg-2'>Set 5: Behold Zakum</a>
+            <a href="{% url 'ms_pages:itcg_dangersofthedeepsea' %}" class='list-group-item color-bg-2'>Set 6: Pirates: Dangers of the Deep Sea</a>
+            <a href="{% url 'ms_pages:ms2' %}" class='list-group-item color-bg-1'>
+              <span class="glyphicon glyphicon-tree-deciduous" aria-hidden="true"></span>
+              Maplestory 2
+            </a>
+          </div>
+        </div>
+
+        <!--middle-->
+        <div class="col-md-8 col-sm-8 col-xs-8">
+          {% block content %}{% endblock content %}
+        </div>
+
+        <!--right_side-->
+        <div class="col-md-2 col-sm-2 col-xs-2">
+          <div class="list-group">
+            <p class='list-group-item color-bg-1'>
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              Contact Info
+            </p>
+            <a href="{% url 'ms_pages:news' %}" class='list-group-item color-bg-2'>Suggestions & Bug Reports Form</a>
+            <p class='list-group-item color-bg-2'>Email: sastwdnoz@gmail.com</p>
+          </div>
+          <div class="progress">
+            <div class="progress-bar color-bg-1 progress-bar-striped active" style='width:100%'>
+              lalala
+            </div>
+          </div>
+
+
+        </div>
+      </div>
     </div>
 
-  </div><!-- /container -->
+    <!-- /container -->
 
- </body>
+  </body>
+
+<br>
+<hr>
+<br>
+  <footer class="footer">
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+          <span class="text-muted">
+            <p>MapleStory is copyright ©2003-2017 by Nexon corporation. Informations obtained
+            from MapleSnow are applies to Nexon's Terms of Use.</p>
+            <p>MapleSnow is a not-for-profit website aimed at providing MapleStory
+              players the best possible information.</p>
+            <p>A site by Wenchang Li</p>
+
+          </span>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+
+      </div>
+    </footer>
+
+<br>
+<br>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

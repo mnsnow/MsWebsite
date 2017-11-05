@@ -1,0 +1,44 @@
+{% extends 'ms_pages/base.html' %}
+
+{% block header %}
+<div class="container">
+  <h1>{{ item_name }}</h1>
+</div>
+{% endblock header %}
+
+{% block breadcrumb %}
+<section id='breadcrumb'>
+  <div class="container">
+    <ol class='breadcrumb'>
+      <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db_items' %}">Items</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db_items_details' item_id %}">{{ item_name }}</a></li>
+    </ol>
+  </div>
+</section>
+{% endblock breadcrumb %}
+
+{% block content %}
+
+<div class="row">
+
+  <div class="col-md-2">
+    <p><img src="http://maplestory.io/api/item/{{ item_id }}/icon" alt="" style='height:120px' ></p>
+  </div>
+
+  <div class="col-md-10">
+
+  </div>
+
+</div>
+
+<hr>
+<div>
+  <p>Name: {{ item_name }}</p>
+  <p>Caregory: {{ item_overallcategory}} - {{ item_category }} - {{ item_subcategory }}</p>
+  <p>Description: {{ item_description }}</p>
+</div>
+
+
+
+{% endblock content %}

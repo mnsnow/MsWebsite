@@ -1,0 +1,29 @@
+{% extends 'ms_pages/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+<div class="container">
+  <h1>Details</h1>
+</div>
+{% endblock header %}
+
+{% block breadcrumb %}
+<section id='breadcrumb'>
+  <div class="container">
+    <ol class='breadcrumb'>
+      <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:itcg' %}">ITCG</a></li>
+      <li class='active'><a href="{% url 'ms_pages:itcg_baseset' %}">Base Set</a></li>
+      <li>Details</li>
+    </ol>
+  </div>
+</section>
+{% endblock breadcrumb %}
+
+{% block content %}
+<div class="container">
+  <p><img src="{% static '/static_dirs/images/itcg' %}/01_{{card_id}}.jpg" alt="{{ card_id }}" style='height:500px' ></p>
+</div>
+
+
+{% endblock content %}

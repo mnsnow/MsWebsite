@@ -123,6 +123,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = '/Users/wenchangli/ms_website/ms_pages/static/static_root'
+
+STATICFILES_DIRS = [
+    '/Users/wenchangli/ms_website/ms_pages/static/static_dirs',
+]
+
+MEDIA_ROOT = '/Users/wenchangli/ms_website/ms_pages/static/media/'
+
+MEDIA_URL = '/media/'
+
 # My settings
 LOGIN_URL = '/users/login/'
 
@@ -151,23 +162,3 @@ if cwd == '/app' or cwd[:4] == '/tmp':
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
         )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

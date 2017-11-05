@@ -1,0 +1,117 @@
+{% extends 'ms_pages/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+
+<div class="container">
+  <h1>Classes & Jobs</h1>
+</div>
+
+{% endblock header %}
+
+
+
+{% block breadcrumb %}
+
+<section id='breadcrumb'>
+  <div class="container">
+    <ol class='breadcrumb'>
+      <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db_classandjob' %}">Classes and Jobs</a></li>
+    </ol>
+  </div>
+</section>
+
+{% endblock breadcrumb %}
+
+
+
+{% block content %}
+
+<div class="row">
+  <a href="{% url 'ms_pages:ingame_db_classandjob_warrior' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Warrior</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/warrior_001.png' %}" class='img-responsive' alt='warrior_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_magician' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Magician</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/magician_001.png' %}" class='img-responsive' alt='magician_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_bowman' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Bowman</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/bowman_001.png' %}" class='img-responsive' alt='bowman_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+<div class='row'>
+  <a href="{% url 'ms_pages:ingame_db_classandjob_thief' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Thief</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/thief_001.png' %}" class='img-responsive' alt='thief_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href="{% url 'ms_pages:ingame_db_classandjob_pirate' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Pirate</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/pirate_001.png' %}" class='img-responsive' alt='pirate_001' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="{% url 'ms_pages:ingame_db_classandjob_beginner' %}">
+    <div class="col-md-4">
+      <div class="panel">
+        <div class="panel-heading color-bg-1">
+          <h3 class='panel-title'>Beginner</h3>
+        </div>
+        <div class="panel-body color-bg-2">
+          <img src="{% static '/static_dirs/images/beginner_001.gif' %}" class='img-responsive' alt='beginner_002' style='height:280px'>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+
+{% endblock content %}
