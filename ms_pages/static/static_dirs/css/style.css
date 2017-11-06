@@ -4,10 +4,30 @@ body{
 
 }
 
+.page-header{
+/*
+	background-image: url('../images/mapleleaf_001.png')!important;
+	background-size: 5%!important;
+	background-repeat: no-repeat!important;
+	background-position: left!important;
+*/
+	background-color: #ae3d1d!important;
+}
+
 /* Navbar */
 .navbar-default {
+	background-image: url('../images/mapleleaf_001.png')!important;
+	background-size: 3%;
+	background-repeat: no-repeat;
+	background-position: 130px 5px;
+	background-color: black!important;
+	border-color: black;
+
+/*
   background-color: #ae3d1d;
+
   border-color: #cc4326;
+*/
 	margin-bottom: 0px;
 	border-radius: 0px;
 }
@@ -103,17 +123,22 @@ body{
 
 /* jumbotron */
 .jumbotron.bg-mapleleaf-001{
+/*
 	margin-top:0px;
+	margin-bottom: 0px;
+*/
 	background-image: url('../images/mapleleaf_001.png');
 	background-size: 75%;
 	background-position: bottom;
+/*
 	opacity: 0.82;
+*/
 	color: white;
 
 }
 
 .jumbotron.bg-mapleleaf-002{
-	margin-top:0px;
+
 	background-image: url('../images/mapleleaf_004.jpg');
 	background-size: 200%;
 	background-position: bottom;
@@ -122,43 +147,120 @@ body{
 
 }
 
-.jumbotron.bg-ms2{
-	margin-top:0px;
+.jumbotron.bg-ms2-home{
+
 	background-image: url('../images/home_ms2_003.jpg');
-	background-size: 200%;
+	background-size: 350%;
 	background-position: bottom;
 	opacity: 0.72;
 	color: black;
 
 }
 
-.jumbotron.bg-itcg{
-	margin-top:0px;
+.jumbotron.bg-itcg-home{
+
 	background-image: url('../images/home_itcg_003.png');
-	background-size: 100%;
+	background-size: 150%;
 	background-position: left;
 	opacity: 0.87;
 	color: white;
 
 }
 
-.jumbotron.bg-bgm{
-	margin-top:0px;
+.jumbotron.bg-bgm-home{
+
 	background-image: url('../images/home_bgm_004.jpg');
-	background-size: 100%;
-	background-position: left;
+	background-size: 150%;
+	background-position: right;
 	opacity: 0.67;
 	color: white;
 
 }
 
-.jumbotron.bg-db{
-	margin-top:0px;
+.jumbotron.bg-db-home{
+
 	background-image: url('../images/home_ingamedb_002.png');
 	background-size: 20%;
 	background-position: bottom;
 	opacity: 0.67;
 	color: black;
+
+}
+
+.jumbotron.bg-underconstruction{
+
+	background-image: url('../images/forum_underconstruction_001.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.67;
+	color: black;
+
+}
+
+.jumbotron.bg-home{
+
+	background-image: url('../images/home_004.jpg');
+	background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.99;
+	color:black;
+
+}
+
+.jumbotron.bg-db{
+
+	background-image: url('../images/home_002.png');
+	background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.99;
+	color:white;
+
+}
+
+.jumbotron.bg-bgm{
+
+	background-image: url('../images/home_008.jpg');
+	background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.99;
+	color:black;
+
+}
+
+.jumbotron.bg-ms2{
+
+	background-image: url('../images/home_006.jpg');
+	background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.99;
+	color:black;
+
+}
+
+.jumbotron.bg-news{
+
+	background-image: url('../images/home_011.png');
+	background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.99;
+	color:white;
+
+}
+
+.jumbotron.bg-itcg{
+
+	background-image: url('../images/home_009.jpg');
+	background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.99;
+	color:black;
 
 }
 

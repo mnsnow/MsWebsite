@@ -1,0 +1,66 @@
+{% extends 'ms_pages/base.html' %}
+
+{% block header %}
+  <div class="container">
+    <h1>General Discussion</h1>
+  </div>
+{% endblock header %}
+
+{% block breadcrumb %}
+  <section id='breadcrumb'>
+    <div class="container">
+      <ol class='breadcrumb'>
+        <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+        <li class='active'><a href="{% url 'ms_pages:forum' %}">Forum</a></li>
+        <li class='active'><a href="{% url 'ms_pages:forum_general_discussion' %}">General Discussion</a></li>
+      </ol>
+    </div>
+  </section>
+{% endblock breadcrumb %}
+
+{% block content %}
+<p>
+  <a href="{% url 'ms_pages:new_topic' %}">Add a new topic</a>
+</p>
+<br>
+
+<div class="row">
+  <div class="col-xs-12">
+    <table class= 'table table-striped table-responsive table-bordered' >
+      <thead>
+        <tr>
+          <th>Thread</th>
+          <th>Starter</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for topic in topics %}
+          <tr>
+            <td style='width:500px'>
+              <a href="{% url 'ms_pages:topic' topic.id %}">
+                <p>{{ topic }}</p>
+              </a>
+            </td>
+            <td tyle='width:50px'>
+
+                <p>{{ topic.owner }}</p>
+
+            </td>
+            <td tyle='width:50px'>
+              <p>{{ topic.date_added|date:'m/d H:i' }}</p>
+            </td>
+          </tr>
+        {% empty %}
+          <p>No results found.</p>
+        {% endfor %}
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+{% endblock content %}

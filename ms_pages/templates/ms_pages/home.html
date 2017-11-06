@@ -1,72 +1,223 @@
-{% extends "ms_pages/base.html" %}
-{% load staticfiles %}
+{% load bootstrap3 %}
 
-{% block header %}
-  <div class='container'>
-    <h1>Hi Maplers! <small>  Find your favorite topic below</small></h1>
-  </div>
-{% endblock header %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>MapleSnow | under construction</title>
 
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/static_dirs/css/style.css' %}">
 
+  </head>
 
+  <body>
 
-
-{% block content %}
-
-<a href="{% url 'ms_pages:news' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-mapleleaf-001">
-    <div class="container">
-      <h1 class="display-3">News</h1>
-      <!--
-      <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
-    -->
-    </div>
-  </div>
-</a>
-
-<a href="{% url 'ms_pages:forum' %}" style='text-decoration: none'>
-    <div class="jumbotron jumbotron-fluid bg-mapleleaf-002">
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default" style="">
       <div class="container">
-        <h1 class="display-3">Forum</h1>
+
+        <div class="navbar-header">
 
         </div>
-    </div>
-</a>
 
-<a href="{% url 'ms_pages:music' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-bgm">
+        <div class="navbar-collapse collapse">
+          <ul id=high1 class="nav navbar-nav">
+            <li><a href="{% url 'ms_pages:home' %}">MapleSnow</a></li>
+            <li><a href="{% url 'ms_pages:home' %}">Home</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+              <li><a>Hello, {{ user.username }}.</a></li>
+              <li><a href="{% url 'users:logout' %}">log out</a><li>
+            {% else %}
+              <li><a href="{% url 'users:register' %}">register</a></li>
+              <li><a href="{% url 'users:login' %}">log in</a></li>
+            {% endif %}
+          </ul>
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
+
+
+
+      <div class="jumbotron jumbotron-fluid bg-home" style='height: 720px'>
+        <div class="container">
+          <h1 class="display-3">Hello Maplers!</h1>
+
+            <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+        </div>
+      </div>
+
+<br>
+<br>
+<div class="container">
+
+  <h1 style='text-align: center'>Find your favorite topic below:</h1>
+
+</div>
+<br>
+<br>
+<br>
+
     <div class="container">
-      <h1 class="display-3">Music</h1>
+      <div class="row">
+        <div class="col-xs-6">
+
+          <a href="{% url 'ms_pages:news' %}" style='text-decoration: none; margin-bottom:0px'>
+            <div class="jumbotron jumbotron-fluid bg-mapleleaf-001" style='height: 400px'>
+              <div class="container">
+                <h1 class="display-3">News</h1>
+
+                <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="col-xs-6">
+
+          <a href="{% url 'ms_pages:forum' %}" style='text-decoration: none; margin-top:0px'>
+              <div class="jumbotron jumbotron-fluid bg-mapleleaf-002" style='height: 400px'>
+                <div class="container">
+                  <h1 class="display-3">Forum</h1>
+
+                    <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+                  </div>
+              </div>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+
+      <a href="{% url 'ms_pages:music' %}" style='text-decoration: none'>
+        <div class="jumbotron jumbotron-fluid bg-bgm-home" style='height: 400px'>
+          <div class="container">
+            <h1 class="display-3">Music</h1>
+
+              <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="col-xs-6">
+
+      <a href="{% url 'ms_pages:ingame_db' %}" style='text-decoration: none'>
+        <div class="jumbotron jumbotron-fluid bg-db-home" style='height: 400px'>
+          <div class="container">
+            <h1 class="display-3">In-Game Database</h1>
+
+              <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+          </div>
+        </div>
+      </a>
 
     </div>
   </div>
-</a>
+</div>
 
-<a href="{% url 'ms_pages:ingame_db' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-db">
-    <div class="container">
-      <h1 class="display-3">In-Game Database</h1>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+
+      <a href="{% url 'ms_pages:itcg' %}" style='text-decoration: none'>
+        <div class="jumbotron jumbotron-fluid bg-itcg-home" style='height: 400px'>
+          <div class="container">
+            <h1 class="display-3">Maplestory ITCG</h1>
+
+              <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="col-xs-6">
+
+      <a href="{% url 'ms_pages:ms2' %}" style='text-decoration: none'>
+        <div class="jumbotron jumbotron-fluid bg-ms2-home" style='height: 400px'>
+          <div class="container">
+            <h1 class="display-3">Maplestory 2</h1>
+
+              <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+          </div>
+        </div>
+      </a>
+
 
     </div>
   </div>
-</a>
+</div>
 
-<a href="{% url 'ms_pages:itcg' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-itcg">
-    <div class="container">
-      <h1 class="display-3">Maplestory ITCG</h1>
 
-    </div>
-  </div>
-</a>
 
-<a href="{% url 'ms_pages:ms2' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-ms2">
-    <div class="container">
-      <h1 class="display-3">Maplestory 2</h1>
 
-    </div>
-  </div>
-</a>
-{% endblock content %}
+
+
+
+
+
+
+
+    <!-- /container -->
+
+  </body>
+
+
+<hr>
+
+  <footer class="footer">
+      <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+          <span class="text-muted">
+            <p>MapleStory is copyright ©2003-2017 by Nexon corporation. Informations obtained
+            from MapleSnow are applies to Nexon's Terms of Use.</p>
+            <p>MapleSnow is a not-for-profit website aimed at providing MapleStory
+              players the best possible information.</p>
+            <p>A site by Wenchang Li</p>
+
+          </span>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+
+      </div>
+    </footer>
+
+<br>
+
+
+</html>

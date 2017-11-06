@@ -20,10 +20,49 @@
 
 {% block content %}
 
+<a href="{% url 'ms_pages:forum_general_discussion' %}" style='text-decoration: none'>
+  <div class="jumbotron jumbotron-fluid bg-mapleleaf-001">
+    <div class="container">
+      <h1 class="display-3">General Discussion</h1>
+      <!--
+      <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+    -->
+    </div>
+  </div>
+</a>
+
+
+<a href="{% url 'ms_pages:forum_gms' %}" style='text-decoration: none'>
+  <div class="jumbotron jumbotron-fluid bg-underconstruction">
+    <div class="container">
+      <h1 class="display-3">GMS</h1>
+
+    </div>
+  </div>
+</a>
+
+<a href="{% url 'ms_pages:forum_itcg' %}" style='text-decoration: none'>
+  <div class="jumbotron jumbotron-fluid bg-underconstruction">
+    <div class="container">
+      <h1 class="display-3">ITCG</h1>
+
+    </div>
+  </div>
+</a>
+
+<a href="{% url 'ms_pages:forum_ms2' %}" style='text-decoration: none'>
+  <div class="jumbotron jumbotron-fluid bg-underconstruction">
+    <div class="container">
+      <h1 class="display-3">Maplestory 2</h1>
+
+    </div>
+  </div>
+</a>
+
+
+
 <div class="row">
-  <p>
-    MapleSnow is a non-commercial website aimed at providing MapleStory players the best possible information.
-  </p>
+
   <a href="{% url 'users:register' %}" class = 'btn btn-success' role='button'>Register an account</a> to make
   your own contribution to this site. Whenever you want to add something to one of the maplestory related topic, make an new entry for that topic.
   <br>

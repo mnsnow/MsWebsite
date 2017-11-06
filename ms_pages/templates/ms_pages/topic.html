@@ -1,7 +1,9 @@
 {% extends 'ms_pages/base.html' %}
 
 {% block header %}
-  <h2>{{ topic }}</h2>
+  <div class="container">
+    <h1>{{ topic }}</h1>
+  </div>
 {% endblock header %}
 
 
@@ -10,8 +12,8 @@
     <div class="container">
       <ol class='breadcrumb'>
         <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
-        <li class='active'><a href="{% url 'ms_pages:topics' %}">Topics</a></li>
-        <li class='active'><a href="{% url 'ms_pages:topic' topic.id %}">{{ topic }}</a></li>
+        <li class='active'><a href="{% url 'ms_pages:forum' %}">Forum</a></li>
+        <li class='active'><a href="{% url 'ms_pages:forum_general_discussion' %}">General Discussion</a></li>
       </ol>
     </div>
   </section>
@@ -23,7 +25,37 @@
 
 {% block content %}
 
-  <p>{{ topic }}</p>
+<h2>Post your discussion for this topic, you can edit your own post at any time!</h2>
+<p>
+  <a href="{% url 'ms_pages:new_entry' topic.id %}">Add a new entry</a>
+</p>
+
+<div class="row">
+  <div class="list-group">
+    {% for entry in entries %}
+      <p class='list-group-item color-bg-1'>
+        Post by {{ topic.owner }} on {{ entry.date_added|date:'m/d, H:i' }}
+      </p>
+      <p class='list-group-item color-bg-2'>
+        {{ entry.text }}
+        <br>
+        <br>
+        <a style='color:white' href="{% url 'ms_pages:edit_entry' entry.id %}">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+          edit entry
+        </a>
+      </p>
+      <br>
+    {% empty %}
+      <p>No discussion yet.</p>
+    {% endfor %}
+  </div>
+
+</div>
+
+
+
+<!--
   <p>
     <a href="{% url 'ms_pages:new_entry' topic.id %}">Add a new entry</a>
   </p>
@@ -42,10 +74,11 @@
           {{ entry.text|linebreaks }}
         </div>
       </div>
-    </div><!--panel-->
+    </div>
     {% empty %}
       There are no entries for this topic yet.
     {% endfor %}
   </ul>
+-->
 
 {% endblock content %}

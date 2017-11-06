@@ -1,1 +1,68 @@
-{% extends 'ms_pages/base.html' %}
+{% load bootstrap3 %}
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MapleSnow | under construction</title>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/static_dirs/css/style.css' %}">
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default" style="">
+      <div class="container">
+
+        <div class="navbar-header">
+
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul id=high1 class="nav navbar-nav">
+            <li><a href="{% url 'ms_pages:home' %}">MapleSnow</a></li>
+            <li><a href="{% url 'ms_pages:home' %}">Home</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+              <li><a>Hello, {{ user.username }}.</a></li>
+              <li><a href="{% url 'users:logout' %}">log out</a><li>
+            {% else %}
+              <li><a href="{% url 'users:register' %}">register</a></li>
+              <li><a href="{% url 'users:login' %}">log in</a></li>
+            {% endif %}
+          </ul>
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
+
+
+
+      <div class="jumbotron jumbotron-fluid bg-news" style='height: 720px'>
+        <div class="container">
+          <h1 class="display-3">Hello Maplers!</h1>
+
+            <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <div class="container">
+
+        <h1 style='text-align: center'>Find your favorite topic below:</h1>
+
+      </div>
+      <br>
+      <br>
+      <br>

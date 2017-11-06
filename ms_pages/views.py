@@ -21,6 +21,24 @@ def forum(request):
     """forum page"""
     return render(request, 'ms_pages/forum.html')
 
+def forum_general_discussion(request):
+    """forum general discussion page"""
+    topics = Topic.objects.filter(owner=request.user).order_by('date_added')
+    context = {'topics': topics}
+    return render(request, 'ms_pages/forum_general_discussion.html',context)
+
+def forum_gms(request):
+    """forum GMS page"""
+    return render(request, 'ms_pages/forum_gms.html')
+
+def forum_itcg(request):
+    """forum itcg page"""
+    return render(request, 'ms_pages/forum_itcg.html')
+
+def forum_ms2(request):
+    """forum Maplestory 2 page"""
+    return render(request, 'ms_pages/forum_ms2.html')
+
 @login_required
 def topics(request):
     """ topics page"""
@@ -35,7 +53,7 @@ def topic(request, topic_id):
     #make sure the topic belongs to the current user
     if topic.owner != request.user:
         raise Http404
-    entries = topic.entry_set.order_by('-date_added')
+    entries = topic.entry_set.order_by('date_added')
     context = {'topic': topic, 'entries': entries}
     return render(request, 'ms_pages/topic.html', context)
 
@@ -50,7 +68,7 @@ def new_topic(request):
             new_topic = form.save(commit=False)
             new_topic.owner = request.user
             new_topic.save()
-            return HttpResponseRedirect(reverse('ms_pages:topics'))
+            return HttpResponseRedirect(reverse('ms_pages:forum_general_discussion'))
 
     context = {'form': form}
     return render(request, 'ms_pages/new_topic.html', context)
