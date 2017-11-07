@@ -1,1 +1,23 @@
-{% extends 'ms_pages/base.html'  %}
+{% extends 'ms_pages/base.html' %}
+{% block header %}
+  <div class="container">
+    <h1>Forum: Maplestory 2</h1>
+  </div>
+{% endblock header %}
+
+{% block breadcrumb %}
+  <section id='breadcrumb'>
+    <div class="container">
+      <ol class='breadcrumb'>
+        <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+        <li class='active'><a href="{% url 'ms_pages:forum' %}">Forum</a></li>
+        <li class='active'><a href="{% url 'ms_pages:forum_ms2' %}">Forum: Maplestory 2</a></li>
+      </ol>
+    </div>
+  </section>
+{% endblock breadcrumb %}
+
+{% block content %}
+<h2>Under construction! Coming soon...</h2>
+
+{% endblock content %}
