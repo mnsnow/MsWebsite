@@ -22,10 +22,11 @@ def forum(request):
     return render(request, 'ms_pages/forum.html')
 
 def forum_general_discussion(request):
-    """forum general discussion page"""
-    topics = Topic.objects.filter(owner=request.user).order_by('date_added')
+    """forum general suggestionsandbugs page"""
+    topics = Topic.objects.order_by('date_added')
     context = {'topics': topics}
     return render(request, 'ms_pages/forum_general_discussion.html',context)
+
 
 def forum_gms(request):
     """forum GMS page"""
@@ -39,20 +40,17 @@ def forum_ms2(request):
     """forum Maplestory 2 page"""
     return render(request, 'ms_pages/forum_ms2.html')
 
-@login_required
+
 def topics(request):
     """ topics page"""
     topics = Topic.objects.filter(owner=request.user).order_by('date_added')
     context = {'topics': topics}
     return render(request, 'ms_pages/topics.html', context)
 
-@login_required
+
 def topic(request, topic_id):
     """ Individual topic page """
     topic = Topic.objects.get(id=topic_id)
-    #make sure the topic belongs to the current user
-    if topic.owner != request.user:
-        raise Http404
     entries = topic.entry_set.order_by('date_added')
     context = {'topic': topic, 'entries': entries}
     return render(request, 'ms_pages/topic.html', context)

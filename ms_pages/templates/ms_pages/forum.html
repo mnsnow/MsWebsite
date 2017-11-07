@@ -1,77 +1,168 @@
-{% extends 'ms_pages/base.html' %}
-
-{% block header %}
-  <div class='container'>
-    <h1>Forum</h1>
-  </div>
-{% endblock header %}
+{% load bootstrap3 %}
 
 
-{% block breadcrumb %}
-  <section id='breadcrumb'>
-    <div class="container">
-      <ol class='breadcrumb'>
-        <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
-        <li class='active'><a href="{% url 'ms_pages:forum' %}">Forum</a></li>
-      </ol>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>MapleSnow | under construction</title>
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static '/static_dirs/css/style.css' %}">
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-default" style="">
+      <div class="container">
+
+        <div class="navbar-header">
+
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul id=high1 class="nav navbar-nav">
+            <li><a href="{% url 'ms_pages:home' %}">MapleSnow</a></li>
+
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+              <li><a>Hello, {{ user.username }}.</a></li>
+              <li><a href="{% url 'users:logout' %}">log out</a><li>
+            {% else %}
+              <li><a href="{% url 'users:register' %}">register</a></li>
+              <li><a href="{% url 'users:login' %}">log in</a></li>
+            {% endif %}
+          </ul>
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </nav>
+
+
+
+      <div class="jumbotron jumbotron-fluid bg-forum" style='height: 720px'>
+        <div class="container">
+
+          <h1 class="display-3">Forum</h1>
+          <p class="lead">You can create new topics and discussing existing topics with other maplers here!
+             Create you own account and be a part of the community! </p>
+          <hr class="my-4">
+          <p>Also don't forget to check out other maplestory communities that already there: </p>
+
+          <div class="">
+
+            <p class="lead col-xs-4">
+              <a class="btn btn-primary btn-lg" href="http://forums.maplestory.nexon.net/" role="button">GMS Official Forum</a>
+            </p>
+            <p class="lead col-xs-3">
+              <a class="btn btn-success btn-lg" href="http://www.basilmarket.com/General-MapleStory-Forum-1" role="button">BasilMarket</a>
+            </p>
+            <p class="lead col-xs-4">
+              <a class="btn btn-warning btn-lg" href="http://www.southperry.net/forumdisplay.php?f=8" role="button">Southperry</a>
+            </p>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+      <br>
+      <br>
+      <div class="container">
+
+        <h1 style='text-align: center'>Find a topic that you are interested in:</h1>
+
+      </div>
+      <br>
+      <br>
+      <br>
+
+
+
+<div class="container">
+  <a href="{% url 'ms_pages:forum_general_discussion' %}" style='text-decoration: none'>
+    <div class="jumbotron jumbotron-fluid bg-mapleleaf-001">
+      <div class="container">
+        <h1 class="display-3">General Discussion</h1>
+        <!--
+        <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+      -->
+      </div>
     </div>
-  </section>
-{% endblock breadcrumb %}
-
-{% block content %}
-
-<a href="{% url 'ms_pages:forum_general_discussion' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-mapleleaf-001">
-    <div class="container">
-      <h1 class="display-3">General Discussion</h1>
-      <!--
-      <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
-    -->
-    </div>
-  </div>
-</a>
-
-
-<a href="{% url 'ms_pages:forum_gms' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-underconstruction">
-    <div class="container">
-      <h1 class="display-3">GMS</h1>
-
-    </div>
-  </div>
-</a>
-
-<a href="{% url 'ms_pages:forum_itcg' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-underconstruction">
-    <div class="container">
-      <h1 class="display-3">ITCG</h1>
-
-    </div>
-  </div>
-</a>
-
-<a href="{% url 'ms_pages:forum_ms2' %}" style='text-decoration: none'>
-  <div class="jumbotron jumbotron-fluid bg-underconstruction">
-    <div class="container">
-      <h1 class="display-3">Maplestory 2</h1>
-
-    </div>
-  </div>
-</a>
-
-
-
-<div class="row">
-
-  <a href="{% url 'users:register' %}" class = 'btn btn-success' role='button'>Register an account</a> to make
-  your own contribution to this site. Whenever you want to add something to one of the maplestory related topic, make an new entry for that topic.
-  <br>
-  <div class="form-group">
-    <label>Upload file</label>
-    <input type='file'>
-    <p class='help-block'>You can upload png and jpg for image and etc.. for music</p>
-
-  </div>
+  </a>
 </div>
 
-{% endblock content %}
+
+<div class="container">
+  <a href="{% url 'ms_pages:forum_gms' %}" style='text-decoration: none'>
+    <div class="jumbotron jumbotron-fluid bg-underconstruction">
+      <div class="container">
+        <h1 class="display-3">GMS</h1>
+
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="container">
+  <a href="{% url 'ms_pages:forum_itcg' %}" style='text-decoration: none'>
+    <div class="jumbotron jumbotron-fluid bg-underconstruction">
+      <div class="container">
+        <h1 class="display-3">ITCG</h1>
+
+      </div>
+    </div>
+  </a>
+</div>
+
+<div class="container">
+  <a href="{% url 'ms_pages:forum_ms2' %}" style='text-decoration: none'>
+    <div class="jumbotron jumbotron-fluid bg-underconstruction">
+      <div class="container">
+        <h1 class="display-3">Maplestory 2</h1>
+
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<br>
+<br>
+<hr>
+<br>
+
+
+<footer class="footer">
+    <div class="row">
+      <div class="col-md-3">
+
+      </div>
+      <div class="col-md-6">
+        <span class="text-muted">
+          <p>MapleStory is copyright ©2003-2017 by Nexon corporation. Informations obtained
+          from MapleSnow are applies to Nexon's Terms of Use.</p>
+          <p>MapleSnow is a not-for-profit website aimed at providing MapleStory
+            players the best possible information.</p>
+          <br>
+          <p>A site by Wenchang Li.</p>
+          <p>Contact: sastwdnoz@gmail.com</p>
+
+        </span>
+      </div>
+      <div class="col-md-3">
+
+      </div>
+
+    </div>
+  </footer>

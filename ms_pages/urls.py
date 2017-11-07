@@ -9,6 +9,7 @@ urlpatterns = [
     #Forum
     url(r'^forum$', views.forum, name='forum'),
     url(r'^forum/general_discussion$', views.forum_general_discussion, name='forum_general_discussion'),
+
     url(r'^forum/gms$', views.forum_gms, name='forum_gms'),
     url(r'^forum/itcg$', views.forum_itcg, name='forum_itcg'),
     url(r'^forum/ms2$', views.forum_ms2, name='forum_ms2'),

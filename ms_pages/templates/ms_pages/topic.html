@@ -26,9 +26,16 @@
 {% block content %}
 
 <h2>Post your discussion for this topic, you can edit your own post at any time!</h2>
-<p>
-  <a href="{% url 'ms_pages:new_entry' topic.id %}">Add a new entry</a>
-</p>
+
+<br>
+<hr>
+
+<h3>
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  <a style='color:black' href="{% url 'ms_pages:new_entry' topic.id %}">Add a new post</a>
+</h3>
+
+<br>
 
 <div class="row">
   <div class="list-group">

@@ -190,7 +190,7 @@ body{
 .jumbotron.bg-underconstruction{
 
 	background-image: url('../images/forum_underconstruction_001.png');
-	background-size: 50%;
+	background-size: 35%;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.67;
@@ -261,6 +261,17 @@ body{
 	background-position: right;
 	opacity: 0.99;
 	color:black;
+
+}
+
+.jumbotron.bg-forum{
+
+	background-image: url('../images/home_010.png');
+	background-size: 105%;
+	background-repeat: no-repeat;
+	background-position: right;
+	opacity: 0.99;
+	color:white;
 
 }
 

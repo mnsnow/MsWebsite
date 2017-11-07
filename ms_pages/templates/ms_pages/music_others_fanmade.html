@@ -1,1 +1,89 @@
 {% extends 'ms_pages/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+
+<div class="container">
+  <h1>Fan Made</h1>
+</div>
+
+{% endblock header %}
+
+
+
+{% block breadcrumb %}
+
+  <section id='breadcrumb'>
+    <div class="container">
+      <ol class='breadcrumb'>
+        <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+        <li class='active'><a href="{% url 'ms_pages:music' %}">Music</a></li>
+        <li class='active'><a href="{% url 'ms_pages:music_others' %}">Others</a></li>
+        <li class='active'><a href="{% url 'ms_pages:music_others_fanmade' %}">Fan Made</a></li>
+      </ol>
+    </div>
+  </section>
+
+
+
+{% endblock breadcrumb %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-xs-5">
+    <h3>Piano Medley</h3>
+    <p>
+      Check out this piano medley of 25 BGMs in maplestory.
+    </p>
+
+  </div>
+  <div class="col-xs-4">
+    <iframe width="440" height="320" src="https://www.youtube.com/embed/ebRXpajrqPk?list=RDebRXpajrqPk"
+    frameborder="0" gesture="media" allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-xs-5">
+    <h3>Orrador's Top 10 Boss Themes</h3>
+    <p>
+      Orrador made a video regarding the top 10 boss themes, so check this list out if you want to recall
+      some memories when you fighting bosses.
+    </p>
+
+  </div>
+  <div class="col-xs-4">
+    <iframe width="440" height="320" src="https://www.youtube.com/embed/yrhPvW4jhf4?list=PLov4hGzUWV4t9hYimF-a-gie9-AyneAYz"
+    frameborder="0" gesture="media" allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col-xs-5">
+    <h3>BGMs Remix</h3>
+    <p>
+      Check out this remix list by Wisp X:
+    </p>
+
+  </div>
+  <div class="col-xs-4">
+    <iframe width="440" height="320" src="https://www.youtube.com/embed/9EPHAf25d50?list=RDQMv8ePRvGrI9g"
+    frameborder="0" gesture="media" allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
+
+
+
+{% endblock content %}

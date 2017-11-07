@@ -19,9 +19,16 @@
 {% endblock breadcrumb %}
 
 {% block content %}
-<p>
-  <a href="{% url 'ms_pages:new_topic' %}">Add a new topic</a>
-</p>
+<h2>Start a new topic here, or make your post on existing topics that you are interested in!</h2>
+
+<br>
+<hr>
+
+<h3>
+  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  <a style='color:black' href="{% url 'ms_pages:new_topic' %}">Add a new topic</a>
+</h3>
+
 <br>
 
 <div class="row">
@@ -36,10 +43,12 @@
       </thead>
 
       <tbody>
+
         {% for topic in topics %}
+
           <tr>
             <td style='width:500px'>
-              <a href="{% url 'ms_pages:topic' topic.id %}">
+              <a style='color:black' href="{% url 'ms_pages:topic' topic.id %}">
                 <p>{{ topic }}</p>
               </a>
             </td>
@@ -52,8 +61,9 @@
               <p>{{ topic.date_added|date:'m/d H:i' }}</p>
             </td>
           </tr>
+
         {% empty %}
-          <p>No results found.</p>
+          <p>No post yet.</p>
         {% endfor %}
 
       </tbody>
