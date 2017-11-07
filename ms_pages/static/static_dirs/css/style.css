@@ -1,4 +1,9 @@
 body{
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	overflow-x: hidden;
 	background-color:#white;
 	color:black;
 
@@ -128,7 +133,7 @@ body{
 	margin-bottom: 0px;
 */
 	background-image: url('../images/mapleleaf_001.png');
-	background-size: 75%;
+	background-size: cover; /*75%*/
 	background-position: bottom;
 /*
 	opacity: 0.82;
@@ -140,7 +145,7 @@ body{
 .jumbotron.bg-mapleleaf-002{
 
 	background-image: url('../images/mapleleaf_004.jpg');
-	background-size: 200%;
+	background-size: cover; /* 200% */
 	background-position: bottom;
 	opacity: 0.72;
 	color: black;
@@ -150,7 +155,7 @@ body{
 .jumbotron.bg-ms2-home{
 
 	background-image: url('../images/home_ms2_003.jpg');
-	background-size: 350%;
+	background-size: cover;
 	background-position: bottom;
 	opacity: 0.72;
 	color: black;
@@ -160,7 +165,7 @@ body{
 .jumbotron.bg-itcg-home{
 
 	background-image: url('../images/home_itcg_003.png');
-	background-size: 150%;
+	background-size: cover;
 	background-position: left;
 	opacity: 0.87;
 	color: white;
@@ -170,7 +175,7 @@ body{
 .jumbotron.bg-bgm-home{
 
 	background-image: url('../images/home_bgm_004.jpg');
-	background-size: 150%;
+	background-size: cover;
 	background-position: right;
 	opacity: 0.67;
 	color: white;
