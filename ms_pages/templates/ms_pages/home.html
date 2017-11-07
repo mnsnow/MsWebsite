@@ -81,48 +81,56 @@
 <br>
 <br>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6">
 
-          <a href="{% url 'ms_pages:news' %}" style='text-decoration: none; margin-bottom:0px'>
-            <div class="jumbotron jumbotron-fluid bg-mapleleaf-001" style='height: 400px'>
-              <div class="container">
-                <h1 class="display-3">News</h1>
+<div class="container">
+  <div class="row">
 
-                <p class="lead">Find out the latest news of Maplestory.</p>
+    <div class="col-md-6">
 
-              </div>
-            </div>
-          </a>
+      <a href="{% url 'ms_pages:news' %}" style='text-decoration: none; margin-bottom:0px'>
+        <div class="jumbotron jumbotron-fluid bg-mapleleaf-001" style='height: 400px'>
+          <div class="container">
+            <h1 class="display-3">News</h1>
 
+            <p class="lead">Find out the latest news of Maplestory.</p>
+
+          </div>
         </div>
-
-        <div class="col-xs-6">
-
-          <a href="{% url 'ms_pages:forum' %}" style='text-decoration: none; margin-top:0px'>
-              <div class="jumbotron jumbotron-fluid bg-mapleleaf-002" style='height: 400px'>
-                <div class="container">
-                  <h1 class="display-3">Forum</h1>
-
-                    <p class="lead">Post topics and discuss with others.</p>
-
-                  </div>
-              </div>
-          </a>
-
-        </div>
-
-      </div>
+      </a>
 
     </div>
+
+    <div class="col-md-6">
+
+      <a href="{% url 'ms_pages:forum' %}" style='text-decoration: none; margin-top:0px'>
+          <div class="jumbotron jumbotron-fluid bg-mapleleaf-002" style='height: 400px'>
+            <div class="container">
+              <h1 class="display-3">Forum</h1>
+
+                <p class="lead">Post topics and discuss with others.</p>
+
+              </div>
+          </div>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
 
 
 
 
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">
+
+    <div class="col-md-6">
 
       <a href="{% url 'ms_pages:music' %}" style='text-decoration: none'>
         <div class="jumbotron jumbotron-fluid bg-bgm-home" style='height: 400px'>
@@ -137,7 +145,7 @@
 
     </div>
 
-    <div class="col-xs-6">
+    <div class="col-md-6">
 
       <a href="{% url 'ms_pages:ingame_db' %}" style='text-decoration: none'>
         <div class="jumbotron jumbotron-fluid bg-db-home" style='height: 400px'>
@@ -151,14 +159,20 @@
       </a>
 
     </div>
+
   </div>
 </div>
 
 
 
+
+
+
+
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">
+
+    <div class="col-md-6">
 
       <a href="{% url 'ms_pages:itcg' %}" style='text-decoration: none'>
         <div class="jumbotron jumbotron-fluid bg-itcg-home" style='height: 400px'>
@@ -173,7 +187,7 @@
 
     </div>
 
-    <div class="col-xs-6">
+    <div class="col-md-6">
 
       <a href="{% url 'ms_pages:ms2' %}" style='text-decoration: none'>
         <div class="jumbotron jumbotron-fluid bg-ms2-home" style='height: 400px'>
@@ -188,8 +202,14 @@
 
 
     </div>
+
   </div>
 </div>
+
+
+
+
+
 
 
 
