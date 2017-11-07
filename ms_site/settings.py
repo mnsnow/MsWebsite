@@ -126,14 +126,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/Users/wenchangli/ms_website/ms_pages/static/static_root'
+STATIC_ROOT = 'ms_pages/static/static_root'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "ms_pages/static")
     #'/Users/wenchangli/ms_website/ms_pages/static/static_dirs',
 ]
 
-MEDIA_ROOT = '/Users/wenchangli/ms_website/ms_pages/static/media/'
+MEDIA_ROOT = 'ms_pages/static/media/'
 
 MEDIA_URL = '/media/'
 
@@ -161,7 +161,7 @@ if cwd == '/app' or cwd[:4] == '/tmp':
 
     # Static asset configuration
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
+    STATIC_ROOT = 'ms_pages/static/static_root'
     STATICFILES_DIRS = (
-        os.path.join(BASE_DIR, 'static'),
+        os.path.join(BASE_DIR, 'ms_pages/static'),
         )
