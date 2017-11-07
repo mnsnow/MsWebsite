@@ -16,10 +16,10 @@ body{
 
 /* Navbar */
 .navbar-default {
-	background-image: url('../images/mapleleaf_001.png')!important;
+	/*background-image: url('../images/mapleleaf_001.png')!important;
 	background-size: 3%;
 	background-repeat: no-repeat;
-	background-position: 130px 5px;
+	background-position: 130px 5px; */
 	background-color: black!important;
 	border-color: black;
 
@@ -201,7 +201,7 @@ body{
 .jumbotron.bg-home{
 
 	background-image: url('../images/home_004.jpg');
-	background-size: 105%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
@@ -212,7 +212,7 @@ body{
 .jumbotron.bg-db{
 
 	background-image: url('../images/home_002.png');
-	background-size: 105%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
@@ -223,7 +223,7 @@ body{
 .jumbotron.bg-bgm{
 
 	background-image: url('../images/home_008.jpg');
-	background-size: 105%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
@@ -234,7 +234,7 @@ body{
 .jumbotron.bg-ms2{
 
 	background-image: url('../images/home_006.jpg');
-	background-size: 105%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
@@ -245,7 +245,7 @@ body{
 .jumbotron.bg-news{
 
 	background-image: url('../images/home_011.png');
-	background-size: 105%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
@@ -256,7 +256,7 @@ body{
 .jumbotron.bg-itcg{
 
 	background-image: url('../images/home_009.jpg');
-	background-size: 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
@@ -267,7 +267,7 @@ body{
 .jumbotron.bg-itcg-set1{
 
 	background-image: url('../images/itcg_set1.png');
-	background-size: 30%;
+	background-size: 100%;
 	background-repeat: repeat;
 	background-color: black;
 	background-position: right;
@@ -279,7 +279,7 @@ body{
 .jumbotron.bg-itcg-set2{
 
 	background-image: url('../images/itcg_set2.png');
-	background-size: 30%;
+	background-size: 100%;
 	background-repeat: repeat;
 	background-color: black;
 	background-position: right;
@@ -291,7 +291,7 @@ body{
 .jumbotron.bg-itcg-set3{
 
 	background-image: url('../images/itcg_set3.gif');
-	background-size: 30%;
+	background-size: 100%;
 	background-repeat: repeat;
 	background-color: black;
 	background-position: right;
@@ -303,7 +303,7 @@ body{
 .jumbotron.bg-itcg-set4{
 
 	background-image: url('../images/itcg_set4.bmp');
-	background-size: 30%;
+	background-size: 100%;
 	background-repeat: repeat;
 	background-color: black;
 	background-position: right;
@@ -315,7 +315,7 @@ body{
 .jumbotron.bg-itcg-set5{
 
 	background-image: url('../images/itcg_set5.png');
-	background-size: 30%;
+	background-size: 100%;
 	background-repeat: repeat;
 	background-color: black;
 	background-position: right;
@@ -327,7 +327,7 @@ body{
 .jumbotron.bg-forum{
 
 	background-image: url('../images/home_010.png');
-	background-size: 105%;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;

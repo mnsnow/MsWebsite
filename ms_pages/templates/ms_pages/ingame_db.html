@@ -6,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MapleSnow | under construction</title>
+    <title>MapleSnow</title>
 
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     {% load staticfiles %}
     <link rel="stylesheet" href="{% static '/static_dirs/css/style.css' %}">
+    <link rel="icon" href="{% static '/static_dirs/images/mapleleaf_001.png' %}">
 
   </head>
 
@@ -27,7 +28,9 @@
 
         <div class="navbar-collapse collapse">
           <ul id=high1 class="nav navbar-nav">
-            <li><a href="{% url 'ms_pages:home' %}">MapleSnow</a></li>
+            <li><a href="{% url 'ms_pages:home' %}">MapleSnow
+              <img src="{% static '/static_dirs/images/mapleleaf_001.png' %}" alt='' style='height:25px'>
+            </a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
