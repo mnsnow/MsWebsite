@@ -28,7 +28,6 @@
         <div class="navbar-collapse collapse">
           <ul id=high1 class="nav navbar-nav">
             <li><a href="{% url 'ms_pages:home' %}">MapleSnow</a></li>
-            <li><a href="{% url 'ms_pages:home' %}">Home</a></li>
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -49,10 +48,28 @@
 
       <div class="jumbotron jumbotron-fluid bg-db" style='height: 720px'>
         <div class="container">
-          <h1 class="display-3">Hello Maplers!</h1>
+          <h1 style='text-align:right' class="display-3">In-Game Database</h1>
 
-            <p class="lead">Find the topic you are interested in below and view the latest news of Maplestory here!  </p>
+          <div class="col-xs-6">
 
+          </div>
+          <div class="col-xs-6">
+
+            <p class="lead">Learn more about each class and job in Maplestory. You can also search for your favorite
+            items in the game by using the search engine below. </p>
+
+            <p>Special thanks to maplestory.io for providing maplestory API services, which makes the in-game database's searching engine possible.</p>
+            <p>Check them out if you want access to more maplestory data:</p>
+
+            <div class="">
+
+              <p class="lead col-xs-3">
+                <a class="btn btn-primary btn-lg" href="http://maplestory.io/" role="button">Maplestory.io</a>
+              </p>
+
+            </div>
+
+          </div>
         </div>
       </div>
 
@@ -65,4 +82,77 @@
       </div>
       <br>
       <br>
+      <br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+
+            <a href="{% url 'ms_pages:ingame_db_classandjob' %}" style='text-decoration: none'>
+              <div class="jumbotron jumbotron-fluid bg-itcg-home" style='height: 400px'>
+                <div class="container">
+                  <h1 class="display-3">Classes and Jobs</h1>
+
+                    <p class="lead">Learn more about each class and job in maplestory here. </p>
+
+                </div>
+              </div>
+            </a>
+
+          </div>
+
+          <div class="col-xs-6">
+
+            <a href="{% url 'ms_pages:ingame_db_items' %}" style='text-decoration: none'>
+              <div class="jumbotron jumbotron-fluid bg-news" style='height: 400px'>
+                <div class="container">
+                  <h1 class="display-3">Items</h1>
+                  <div class="col-xs-6">
+                    <p class="lead">Search for over 40000+ items in the game!</p>
+
+                  </div>
+                  <div class="col-xs-6">
+
+                  </div>
+
+                </div>
+              </div>
+            </a>
+
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      <hr>
+
+        <footer class="footer">
+            <div class="row">
+              <div class="col-md-3">
+
+              </div>
+              <div class="col-md-6">
+                <span class="text-muted">
+                  <p>MapleStory is copyright ©2003-2017 by Nexon corporation. Informations obtained
+                  from MapleSnow are applies to Nexon's Terms of Use.</p>
+                  <p>MapleSnow is a not-for-profit website aimed at providing MapleStory
+                    players the best possible information.</p>
+                  <br>
+                  <p>A site by Wenchang Li.</p>
+                  <p>Contact: sastwdnoz@gmail.com</p>
+
+                </span>
+              </div>
+              <div class="col-md-3">
+
+              </div>
+
+            </div>
+          </footer>
+
       <br>

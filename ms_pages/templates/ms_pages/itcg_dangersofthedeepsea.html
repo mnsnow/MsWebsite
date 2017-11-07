@@ -1,1 +1,31 @@
 {% extends 'ms_pages/base.html' %}
+{% load staticfiles %}
+
+{% block header %}
+<div class="container">
+  <h1>Set 6: Dangers of the Deep Sea</h1>
+</div>
+{% endblock header %}
+
+{% block breadcrumb %}
+<section id='breadcrumb'>
+  <div class="container">
+    <ol class='breadcrumb'>
+      <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:itcg' %}">ITCG</a></li>
+      <li class='active'><a href="{% url 'ms_pages:itcg_dangersofthedeepsea' %}">Dangers of the Deep Sea</a></li>
+    </ol>
+  </div>
+</section>
+{% endblock breadcrumb %}
+
+{% block content %}
+
+<h2>
+  We are still collecting informations of this set since this set has only been released in Korea. If you have any information regarding Set 6
+  of ITCG, you can contact me: sastwdnoz@gmail.com
+</h2>
+
+
+
+{% endblock content %}

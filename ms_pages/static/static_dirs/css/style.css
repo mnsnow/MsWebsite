@@ -238,7 +238,7 @@ body{
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
-	color:black;
+	color:white;
 
 }
 
@@ -256,11 +256,71 @@ body{
 .jumbotron.bg-itcg{
 
 	background-image: url('../images/home_009.jpg');
-	background-size: 105%;
+	background-size: 100%;
 	background-repeat: no-repeat;
 	background-position: right;
 	opacity: 0.99;
-	color:black;
+	color:#222222;
+
+}
+
+.jumbotron.bg-itcg-set1{
+
+	background-image: url('../images/itcg_set1.png');
+	background-size: 30%;
+	background-repeat: repeat;
+	background-color: black;
+	background-position: right;
+	opacity: 0.89;
+	color:white;
+
+}
+
+.jumbotron.bg-itcg-set2{
+
+	background-image: url('../images/itcg_set2.png');
+	background-size: 30%;
+	background-repeat: repeat;
+	background-color: black;
+	background-position: right;
+	opacity: 0.89;
+	color:white;
+
+}
+
+.jumbotron.bg-itcg-set3{
+
+	background-image: url('../images/itcg_set3.gif');
+	background-size: 30%;
+	background-repeat: repeat;
+	background-color: black;
+	background-position: right;
+	opacity: 0.89;
+	color:white;
+
+}
+
+.jumbotron.bg-itcg-set4{
+
+	background-image: url('../images/itcg_set4.bmp');
+	background-size: 30%;
+	background-repeat: repeat;
+	background-color: black;
+	background-position: right;
+	opacity: 0.89;
+	color:white;
+
+}
+
+.jumbotron.bg-itcg-set5{
+
+	background-image: url('../images/itcg_set5.png');
+	background-size: 30%;
+	background-repeat: repeat;
+	background-color: black;
+	background-position: right;
+	opacity: 0.89;
+	color:white;
 
 }
 

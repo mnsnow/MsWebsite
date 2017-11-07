@@ -12,6 +12,7 @@
   <div class="container">
     <ol class='breadcrumb'>
       <li class='active'><a href="{% url 'ms_pages:home' %}">Home</a></li>
+      <li class='active'><a href="{% url 'ms_pages:ingame_db' %}">In-Game Database</a></li>
       <li class='active'><a href="{% url 'ms_pages:ingame_db_items' %}">Items</a></li>
     </ol>
   </div>
@@ -22,11 +23,14 @@
 
 {% block content %}
 <div class="">
-  <h4>This is an ingame item database. You can search for over 40,000 items in the game!</h4>
+  <h2>This is an ingame item database. You can search for over 40,000 items in the game!</h2>
+  <p>
+    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+    Special thanks to maplestory.io for providing maplestory API services, which makes this searching engine possible.</p>
 </div>
 <hr>
-<p>Instruction: Type in the name of the item or any key words related to that item. Searching is NOT case sensitative. Click on the item name or it's image to see more details of that item.</p>
-
+<h3>Instruction: Type in the name of the item or any key words related to that item. Searching is NOT case sensitative. Click on the item name or it's image to see more details of that item.</h3>
+<br>
 <form action="" method="GET">
   <input type="text" name="q" value="" placeholder="Search items">
   <input type="submit" value="Search">

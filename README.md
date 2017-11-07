@@ -8,3 +8,5 @@ MapleSnow is a not-for-profit website aimed at providing MapleStory
 players the best possible information.
 
 A site by Wenchang Li
+
+Special thanks to maplestory.io for providing maplestory API services, which makes the in-game database's searching engine possible.

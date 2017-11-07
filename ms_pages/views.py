@@ -11,8 +11,12 @@ from .api import Msapi, Msapi_item_details
 
 #Home
 def home(request):
-    """ Home page """
+    """ Home page with own layout """
     return render(request, 'ms_pages/home.html')
+
+def home_alter(request):
+    """ Alternativa home page for uniform layout """
+    return render(request, 'ms_pages/home_alter.html')
 
 
 
