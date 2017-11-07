@@ -1,0 +1,2 @@
+This file ensures that ms_site/static will be added to the project. Djamgo will collect static files and place them in
+ms_site/static/.
