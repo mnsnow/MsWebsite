@@ -1,4 +1,4 @@
 ms_env/
 _pycache_/
 *.sqlite3
-/ms_site/settings/local
+/ms_site/settings/local.py
