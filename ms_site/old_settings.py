@@ -11,12 +11,17 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.core.exceptions import ImproperlyConfigured
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
+# Handling Key Import Errors
+
+
+
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -24,6 +29,9 @@ SECRET_KEY = '*6z!&ca)e_%zdm4-^@cs!v)^$m6!=dvesz--25(0wx6)9_(jo0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+
+#CRMEASY_DB_PASS = get_env_variable('CRMEASY_DB_PASS')
 
 ALLOWED_HOSTS = []
 
@@ -83,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ms_website',
         'USER': 'root',
-        'PASSWORD': '19930819aa'
+        'PASSWORD': '19930819aa',
     }
 }
 
