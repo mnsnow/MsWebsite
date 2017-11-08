@@ -1,10 +1,17 @@
 {% extends 'ms_pages/base.html' %}
+{% load bootstrap3 %}
+
+{% block header %}
+  <div class="container">
+    <h1>Add a post to this topic:</h1>
+  </div>
+{% endblock header %}
 
 {% block content %}
 
-  <p>
-  <a href="{% url 'ms_pages:topic' topic.id %}">{{ topic }}</a>
-  </p>
+  <h2>
+  <a style='color:black' href="{% url 'ms_pages:topic' topic.id %}">{{ topic }}</a>
+</h2>
   <p>Add a new entry:</p>
   <form action="{% url 'ms_pages:new_entry' topic.id %}" method='post'>
     {% csrf_token %}
