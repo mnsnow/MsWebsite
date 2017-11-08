@@ -14,5 +14,3 @@ try:
     from ms_site.settings.local import *
 except:
     pass
-
-#test
